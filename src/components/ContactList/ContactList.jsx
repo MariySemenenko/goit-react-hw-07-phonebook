@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Ul } from '../StyledApp.styled';
 import { selectVisibleContacts } from 'redux/contacts/selectors';
-import { deleteContact } from 'redux/contacts/contactsSlice';
+import { deleteContact } from 'redux/contacts/operations';
 
 // відображаю список контактів і маю можливість видаляти контакт зі списку
 
@@ -15,11 +15,11 @@ export const ContactList = () => {
 
       {contactsList.map(
         (
-          { name, number, id } // кожен контакт має властивість name, number, id
+          { name, phone, id } // кожен контакт має властивість name, number, id
         ) => (
           <li key={id}>
             <p>
-              {name}: {number}
+              {name}: {phone}
             </p>
 
             <button type="button" onClick={() => dispatch(deleteContact(id))}>
