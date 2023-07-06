@@ -6,7 +6,6 @@ import { setFilter } from 'redux/contacts/filterSlice';
 //тут виконується пошук імені в телефонній книзі
 
 export const Filter = () => {
-  //value={filter} це фільтр який витягую з редаксу filterSlice та передаю через dispatch
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
   return (

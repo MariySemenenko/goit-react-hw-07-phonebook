@@ -24,7 +24,7 @@ export const App = () => {
 
   //  console.log(contacts)
   return (
-    // функція onSubmitData передається як властивість для додавання нового контакту
+   
     <Div>
       <ContactForm />
       {isLoading && <p>Loading</p>}
